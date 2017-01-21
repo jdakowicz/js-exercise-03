@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+      <meta charset="utf-8">
+      <title>JS exercise 03</title>
+      <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        .input-transform {
+          border: 1px solid #000;
+          padding: 5px 10px;
+          background-color: #fff;
+          outline: 0;
+          border-radius: 0;
+          color: #000;
+          font-size: 14px;
+          width: 100%;
+          margin-top: 10px;
+        }
+        .wrapper {
+          min-width: 500px;
+          width: 50%;
+          margin: 0 auto;
+        }
+        ul {
+          margin: 20px 0 0;
+          list-style: none;
+          padding: 0;
+        }
+        li + li {
+          margin-top: 10px;
+        }
+        a {
+          margin-top: 20px;
+          width: 100%;
+          border: 3px solid #000;
+          border-radius: 5px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          text-transform: uppercase;
+          text-decoration: none;
+          display: block;
+          color: #000;
+        }
+        .result:not(:empty) {
+          color: #ff0000;
+          text-align: center;
+        }
+      </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <label for="text-transform">Type the text you want to transform here:</label>
+      <input class="input-transform" type="text" id="text-transform" data-input placeholder="Enter text here">
+      <ul class="radios">
+        <li>
+          <input type="radio" name="transform-type" id="tr1" value="lowerUpper" data-type checked>
+          <label for="tr1">Invert lover-upper (lorem IPSUM = LOREM ipsum) </label>
+        </li>
+        <li>
+          <input type="radio" name="transform-type" id="tr2" value="swap" data-type>
+          <label for="tr2">Place swap (lorem ipsum = ipsum lorem)</label>
+        </li>
+        <li>
+          <input type="radio" name="transform-type" id="tr3" value="backwards" data-type>
+          <label for="tr3">Backwards (lorem ipsum = muspi merol)</label>
+        </li>
+        <li>
+          <input type="radio" name="transform-type" id="tr4" value="pokemon" data-type>
+          <label for="tr4">Pokemon style (lorem ipsum = lOrEm IpSuM)</label>
+        </li>
+        <li>
+          <input type="radio" name="transform-type" id="tr5" value="random" data-type>
+          <label for="tr5">Random (lorem ipsum = ire pslmoum)</label>
+        </li>
+        <li>
+          <input type="radio" name="transform-type" id="tr6" value="snake" data-type>
+          <label for="tr6">Snake case (lorem ipsum = lorem_ipsum)</label>
+        </li>
+        <li>
+          <input type="radio" name="transform-type" id="tr7" value="camel" data-type>
+          <label for="tr7">Camel case (lorem ipsum = loremIpsum)</label>
+        </li>
+        <li>
+          <input type="radio" name="transform-type" id="tr8" value="oneMore" data-type>
+          <label for="tr8">Next letters (lorem ipsum = mpsfn jqtvn)</label>
+        </li>
+        <li>
+          <input type="radio" name="transform-type" id="tr9" value="oneLess" data-type>
+          <label for="tr9">Previous letters (lorem ipsum = knqdl hortl)</label>
+        </li>
+        <li>
+          <input type="radio" name="transform-type" id="tr10" value="seperate" data-type>
+          <label for="tr10">Seperate (lorem ipsum = l o r e m   i p s u m)</label>
+        </li>
+      </ul>
+      <a href="#" data-submit>Transform</a>
+      <p class="result" data-result></p>
+    </div>
+    <script src="./transformer.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
